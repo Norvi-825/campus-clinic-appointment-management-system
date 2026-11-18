@@ -1,0 +1,401 @@
+/* ============================================================================
+   CCAMS — USTED University Campus Clinic Stylesheet
+   Palette: Healthcare Blue, Crisp White & Soft Light Grey
+   ============================================================================ */
+
+:root {
+    --ccams-primary: #0d47a1;
+    --ccams-primary-mid: #1565c0;
+    --ccams-accent: #1e88e5;
+    --ccams-bg: #f4f7fb;
+    --ccams-surface: #ffffff;
+    --ccams-border: #dce4f0;
+    --ccams-text: #1e293b;
+    --ccams-muted: #64748b;
+    --ccams-sidebar-width: 260px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--ccams-text);
+    background-color: var(--ccams-bg);
+    line-height: 1.6;
+}
+
+.text-primary-dark {
+    color: var(--ccams-primary) !important;
+}
+
+.bg-primary-dark {
+    background-color: var(--ccams-primary) !important;
+}
+
+.shadow-xs {
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+/* Brand Emblem */
+.brand-emblem {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.brand-emblem-blue {
+    background: linear-gradient(135deg, var(--ccams-primary), var(--ccams-accent));
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0b3982 0%, #1565c0 55%, #1e88e5 100%);
+    color: #ffffff;
+    padding: 4.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 1.1rem;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.98);
+    color: var(--ccams-text);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    box-shadow: 0 20px 45px rgba(8, 30, 74, 0.25);
+}
+
+/* Feature & Service Cards */
+.ccams-card {
+    background: var(--ccams-surface);
+    border: 1px solid var(--ccams-border);
+    border-radius: 0.9rem;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.step-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #e3f2fd;
+    color: var(--ccams-primary);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.9rem;
+}
+
+.service-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #e8f1fd;
+    color: var(--ccams-primary-mid);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+}
+
+/* Soft Status Badges */
+.badge-soft-success {
+    background-color: #dcfce7;
+    color: #166534;
+    font-weight: 600;
+}
+
+.badge-soft-warning {
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: 600;
+}
+
+.badge-soft-primary {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.badge-soft-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+    font-weight: 600;
+}
+
+.badge-soft-secondary {
+    background-color: #e2e8f0;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* Dashboard Layout */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.dashboard-sidebar {
+    width: var(--ccams-sidebar-width);
+    background: linear-gradient(180deg, #0b3578 0%, #0d47a1 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    transition: transform 0.25s ease;
+}
+
+.sidebar-brand {
+    padding: 1.25rem 1.25rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-role-pill {
+    margin: 1rem 1.25rem 0.5rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.55rem;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #e2e8f0;
+}
+
+.sidebar-nav {
+    padding: 0.5rem 0.75rem;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 0.6rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, 0.13);
+    color: #ffffff;
+}
+
+.sidebar-link.active {
+    background-color: #ffffff;
+    color: var(--ccams-primary);
+    font-weight: 600;
+}
+
+.text-danger-soft {
+    color: #fecaca !important;
+}
+
+.sidebar-footer {
+    padding: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dashboard-main {
+    margin-left: var(--ccams-sidebar-width);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.dashboard-topbar {
+    background: var(--ccams-surface);
+    border-bottom: 1px solid var(--ccams-border);
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.user-profile-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.avatar-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #e3f2fd;
+    color: var(--ccams-primary);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-content {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.dashboard-footer {
+    background: var(--ccams-surface);
+    border-top: 1px solid var(--ccams-border);
+    padding: 0.9rem 1.5rem;
+}
+
+/* Stat Cards */
+.stat-card {
+    background: var(--ccams-surface);
+    border: 1px solid var(--ccams-border);
+    border-radius: 0.9rem;
+    padding: 1.2rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--ccams-text);
+}
+
+.stat-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ccams-muted);
+    margin-bottom: 0.25rem;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+
+/* Slot Cards on Booking Page */
+.slot-option-label {
+    display: block;
+    cursor: pointer;
+    border: 1.5px solid var(--ccams-border);
+    border-radius: 0.75rem;
+    padding: 0.85rem 1rem;
+    background: #ffffff;
+    transition: all 0.15s ease;
+}
+
+.slot-option-label:hover {
+    border-color: var(--ccams-accent);
+    background: #f8fbff;
+}
+
+.btn-check:checked + .slot-option-label {
+    border-color: var(--ccams-primary);
+    background: #e8f1fd;
+    box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.15);
+}
+
+/* Public Footer */
+.public-footer {
+    background: #0a2558;
+    color: #ffffff;
+}
+
+.footer-links li {
+    margin-bottom: 0.45rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Loading Overlay */
+.ccams-loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(2px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Sidebar */
+.sidebar-backdrop {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .dashboard-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .dashboard-sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-backdrop.show {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.45);
+        z-index: 1035;
+    }
+
+    .dashboard-main {
+        margin-left: 0;
+    }
+}
+
+.required-star {
+    color: #dc2626;
+    font-weight: 700;
+}

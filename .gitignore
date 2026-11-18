@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Local environment & secret configuration
+.env
+.env.local
+config/database.local.php
+
+# Logs & OS files
+*.log
+.DS_Store
+Thumbs.db
+.phpunit.result.cache
+dist/

@@ -1,0 +1,6 @@
+{
+  "name": "USTED University - Campus Clinic Appointment Management System (CCAMS)",
+  "description": "Complete PHP 8, MySQL/PDO, HTML5, CSS3, and JavaScript Campus Clinic Appointment Management System for USTED University.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
